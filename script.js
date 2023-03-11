@@ -16,23 +16,23 @@ function get_data(collected_data) {
     let average_sleep_pulse = ""
 
     try {
-        average_heart_rate = document.querySelector(".HeartRateCardMain_wrapper__1q56N")
-        .querySelector(".DailySummaryCardMainValue_mainValue__30zDY").textContent.split(" ")[0]
+        average_heart_rate = document.querySelector(".HeartRateCardMain_wrapper__3H4Qz")
+            .querySelector(".DailySummaryCardMainValue_mainValue__38C3I").textContent.split(" ")[0]
         
-        steps_count = document.querySelector(".StepsCardMain_wrapper__2zL_L")
-            .querySelector(".DailySummaryCardMainValue_mainValue__30zDY").textContent.split(" ")[0]
+        steps_count = document.querySelector(".StepsCardMain_wrapper__2CPX5")
+            .querySelector(".DailySummaryCardMainValue_mainValue__38C3I").textContent.split(" ")[0]
 
-        total_sleep_time = document.querySelector(".SleepCard_sleepCardMain__PeBk-")
-            .querySelector(".DailySummaryCardMainValue_mainValue__30zDY").textContent
+        total_sleep_time = document.querySelector(".SleepCard_sleepCardMain__1YrNK")
+            .querySelector(".DailySummaryCardMainValue_mainValue__38C3I").textContent
 
-        sleep_data = document.querySelector(".SleepCard_sleepCardMain__PeBk- .marYAxisXS .flexboxgrid_row__3VcM_ .flexboxgrid_colXs7__2OCU5")
-            .querySelectorAll(".flexboxgrid_colXs12__1Hboc .DailySummaryCardDataBlock_dataValue__3vgfj")
+        sleep_data = document.querySelector(".SleepCard_sleepCardMain__1YrNK .marYAxisXS .flexboxgrid_row__cD___ .flexboxgrid_colXs7__3FA4A .flexboxgrid_row__cD___")
+            .querySelectorAll(".flexboxgrid_colXs12__3z5Wt")
         
-        average_o2 = document.querySelector(".SleepPulseOxCard_pulseOxCardMain__1vJd_")
-            .querySelector(".DailySummaryCardMainValue_mainValue__30zDY").textContent.split(" ")[0]
+        average_o2 = document.querySelector(".SleepPulseOxCard_pulseOxCardMain__1RwiS")
+            .querySelector(".DailySummaryCardMainValue_mainValue__38C3I").textContent.split(" ")[0]
             
-        oxymeter_data = document.querySelector(".SleepPulseOxCard_pulseOxCardMain__1vJd_ .marYAxisXS .flexboxgrid_row__3VcM_ .flexboxgrid_colXs7__2OCU5")
-            .querySelectorAll(".flexboxgrid_colXs12__1Hboc .DailySummaryCardDataBlock_dataValue__3vgfj")
+        oxymeter_data = document.querySelector(".SleepPulseOxCard_pulseOxCardMain__1RwiS .marYAxisXS .flexboxgrid_row__cD___ .flexboxgrid_colXs7__3FA4A")
+            .querySelectorAll(".flexboxgrid_colXs12__3z5Wt")
             
     } catch (error) {
         
@@ -83,7 +83,7 @@ let main_algorithm = () => {
             console.log(count, "done")
             count++
             get_data(collected_data)
-            document.querySelector('[aria-label="Predchádzajúca"]').click()
+            document.querySelector('[aria-label="Ďalej"]').click()
         }, 6000 * i)
     }
 }
